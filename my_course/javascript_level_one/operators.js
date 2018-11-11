@@ -83,7 +83,7 @@ var x = 1
 var y = 2
 
 // Exercise 1
-"2" == y && x === 1;  // false
+"2" == y && x === 1;  // true
 
 // Exercise 2
 x >= 0 || y === "2";  // true
