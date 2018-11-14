@@ -44,11 +44,10 @@ while (true) {
  }
 
  // while loop 1 - 10
-var x = 0
-while (x <= 10) {
-  if (x % 2 == 0) {
+var x = 1
+while (x < 11) {
+  if (x % 2 === 0) {
     console.log(x);
-    break;
   }
-  x = x + 1
+  x = x + 1;
 }
