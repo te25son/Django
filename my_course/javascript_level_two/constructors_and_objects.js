@@ -90,3 +90,34 @@ function getInterests(arr) {
   }
   return finArr.join("")
 }
+
+//  there are other ways of creating objects that are less common
+// first, you can use the Object() constructor to create a new object
+var person1 = new Object();
+
+// this creates an empty object in the person1 variable
+// you could then add the information you want
+person1.name = 'Toby';
+person1.age = 44;
+person1.interests = ['crafting', 'canoeing']
+
+// alternatively, you could pass an object literal inside the object constructor
+var person1 = new Object(
+  {
+    name: 'Chris',
+    age: 38,
+    greeting: function() {
+      alert('Wassup dawg, name\'s ' + this.name + '.')
+    }
+  }
+)
+
+// furthermore you could also use the Create() method
+// with the create method you create a new object based off of a previously existing object
+// observe...
+var person2 = Object.create(person1);
+
+// person2 is now a copy of person1
+// you can change values as you normally would
+person2.name = 'Carla';
+person2.age = 59;
