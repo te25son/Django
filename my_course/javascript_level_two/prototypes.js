@@ -17,7 +17,7 @@ function Person(first, last, age, gender, occupation, interests) {
 
     // get pronoun from gender
     if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
-      pronoun = 'He likes ';
+      pronoun = 'IHe likes ';
     } else if(this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
       pronoun = 'She likes ';
     } else {
@@ -74,3 +74,35 @@ person1.valueOf()
 // it moves to the next object up the chain, Person(). Does Person() have the valueOf()
 // method? Nope, so on to the next. Eventually, if the method exists in the protoype chain,
 // the browser will reach it. Otherwise, it doesn't exist and an error message will appear.
+
+// to say "it doesn't exist" might be too strong.
+// methods may exist in Object() that are not inherited by Person() or person1
+// the methods and properties that are inhereted are found under the subnamespace prototype
+// therefore everything under Object.prototype is inherted by successive objects
+// but those under just Object are not.
+// for example...
+
+// something that is inherted
+person1.isPrototypeOf()
+person1.valueOf()
+
+// something that is not
+person1.keys() // ERROR
+
+// while keys is a method in Object(), it is not under the subnamespace prototype,
+// and therefore is not inhereted.
+// you can still call the method on person1, but you would have to use Object() to do so
+// observe...
+Object.keys(person1)
+
+// this is exactly how we use the create() method
+// instead of inherting from a chain of prototypes,
+// you specify the exact prototype you wish to create from
+var person2 = Object.create(person1)
+
+// to check the prototype of something use the inherted method __proto__
+// calling __proto__ on person2 will return person1
+person2.__proto__
+
+// and calling __proto__ on person1 will return Person()
+person1.__proto__
