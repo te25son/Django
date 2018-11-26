@@ -14,3 +14,12 @@ document.getElementsByClassName()  // returns a list of all items belonging to t
 document.getElementsByTagName()  // returns a list of all elements with a certain tag
 document.querySelector()  // returns the first object containing the css style selector
 document.querySelectorAll()  // returns all objects containing the css style selector
+
+// example of how to get an element and set it to a variable
+var myVariable = document.querySelector('p')
+
+// other useful ways of grabbing elements and groups of elements
+myVariable.textContent  // returns just the text
+myVariable.innerHTML  // returns the text with any html tags
+myVariable.getAttribute()  // returns the the original attribute
+myVariable.setAttribute()  // allows you to set an attribute
