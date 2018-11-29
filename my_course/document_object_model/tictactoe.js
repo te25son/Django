@@ -1,27 +1,27 @@
+// define all game variables...
+// start button:
 var start = document.querySelector('#start')
 var game = document.querySelector('#game')
-
-
-start.addEventListener('click', gameStart)
-
-// get all cells with DOM
+// grab table cells
 var cells = document.querySelectorAll('td')
+// click count for play function
+var clickCount = 0
+
+// add event listener and function for game start
+// event listener
+start.addEventListener('click', gameStart)
+// function
+function gameStart() {
+  alert("The game has started. X goes first.");
+  game.style.visibility = 'visible';
+}
 
 // give function play() to all cells with for loop
 for (var i = 0; i < cells.length; i++) {
   cells[i].addEventListener('click', play)
 }
 
-// add game start function
-function gameStart() {
-  alert("The game has started. X goes first.");
-  game.style.visibility = 'visible';
-}
-
-// add array to keep track of moves made
-var clickCount = 0
-
-// add function to play
+// add play function
 function play() {
   if (this.textContent === '') {
     if (clickCount % 2 == 0) {
@@ -38,8 +38,4 @@ function play() {
   } else {
     alert('Square already taken. Choose another.')
   }
-}
-
-function CheckForWinner() {
-
 }
