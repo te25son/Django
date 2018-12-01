@@ -20,6 +20,9 @@ var listItem1 = $('li')[1]
 var listItems = $('li')
 listItems.eg(1).methodYouWant()
 
+// you can get the last element in a list by using negative indexing
+listItems.eg(-1)
+
 // you can change an elements css using jquery
 var x = $('h1')
 x.css('color', 'white')  // first parameter = the element you want to change, second element = what you want to change the element to
@@ -34,3 +37,31 @@ var newCSS = {
 }
 // pass the object into jquery function
 x.css(newCSS)
+
+// grabbing text with jquery
+$('h1').text()
+
+// changing the text with jquery
+$('h1').text('New text goes here and replaces old text.')
+
+// grabbing html with jquery
+$('h1').html()
+
+// changing html with jquery
+$('h1').html('<em>chaning stuff!</em>')
+
+// changing input tags
+// change the type of input
+$('input').eg(0).attr('type', 'checkbox')  // first parameter = the element you want to change, second element = what you want to change the element to
+
+// change the value of the input
+$('input').eg(0).val('new value')
+
+// add an existing class with jquery
+$('h1').addClass('turnRed')
+
+// remove a class with jquery
+$('h1').removeClass('turnRed')
+
+// toggle a class (remove if there, add if not)
+$('h1').toggleClass('turnBlue')
