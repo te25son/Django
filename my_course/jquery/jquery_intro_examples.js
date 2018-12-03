@@ -18,10 +18,10 @@ var listItem1 = $('li')[1]
 ...
 // the more common and less buggy method (aka the preferred method) is to use .eg(//the number of item you want)
 var listItems = $('li')
-listItems.eg(1).methodYouWant()
+listItems.eq(1).methodYouWant()
 
 // you can get the last element in a list by using negative indexing
-listItems.eg(-1)
+listItems.eq(-1)
 
 // you can change an elements css using jquery
 var x = $('h1')
@@ -52,10 +52,10 @@ $('h1').html('<em>chaning stuff!</em>')
 
 // changing input tags
 // change the type of input
-$('input').eg(0).attr('type', 'checkbox')  // first parameter = the element you want to change, second element = what you want to change the element to
+$('input').eq(0).attr('type', 'checkbox')  // first parameter = the element you want to change, second element = what you want to change the element to
 
 // change the value of the input
-$('input').eg(0).val('new value')
+$('input').eq(0).val('new value')
 
 // add an existing class with jquery
 $('h1').addClass('turnRed')
