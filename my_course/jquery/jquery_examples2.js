@@ -12,7 +12,6 @@ firstH1.hover(
 
 )
 
-
 // key press
 // keep track of which key is pressed
 $('input').eq(1).keypress(
@@ -37,4 +36,9 @@ $('input').eq(0).keypress(
 // on() - sort of like addEventListener
 firstH1.on('mouseover', function() {
   $(this).text('You found the big secret!');
+})
+
+// jquery animations
+$('input').eq(2).on('click', function() {
+  $('.container').fadeOut(3000);
 })
