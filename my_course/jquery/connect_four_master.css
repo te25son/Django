@@ -4,9 +4,10 @@ body {
   padding: 3rem 0rem 5rem 0rem;
 }
 
-button {
+.board button {
   border: 1px solid black;
   border-radius: 50%;
   height: 75px;
   width: 75px;
+  background-color: rgb(218, 218, 218);
 }
